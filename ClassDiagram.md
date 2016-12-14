@@ -46,13 +46,14 @@ class TodoListService {
           boolean delete(String id, Array<String> ids) 
 }
 
+TodoFactory ..>Todo
 TodoList o-- Todo
-TodoList --> TodoFactory
-TodoList --> TodoRepository
+TodoListService ..> Todo
+TodoListService --> TodoFactory
 TodoListService o-- TodoList
 TodoListService --> TodoListFactory
 TodoListService --> TodoListRepository
 @enduml
 ```
 
-![](http://www.plantuml.com/plantuml/png/fLBBRiCW4BpxA_P8bFWFAakzzDHJqn-Wi4fHNR1Waoggyk-1HTZKTg9AkHXszZ6pOrGlGu1tfntyDW0jA6S3mPwyiGSmEcBR4bdvZNMiJL3U36ISPVZ3kHwb1VM9wWjpAz_5Xkz7Mw9BqwYH-4KgSlxC_5km-2CgljqAsQp_3GSNJ3KYo1CANedY9tDhx95GZ7ljuDbxUNxAG1UHC1lxQg8Fjpt9xQcmOvfGEqE6-cmLov1Qp_LmU1oq95nD7P3IEGdUB5XZYNXakRk-hzJVzZbb7r6oHtyo2ddiQFr2K9NxmypM5Gdb3Vv722GbunJNjamm8MtRrGzqcPWSQUQhb6a9MoHBV_KNxjPCF5S0)
+![](http://www.plantuml.com/plantuml/svg/fLBBRiCW4BpxA_P8b90lg2prqbDFJNw0mYf5TS62JQeeoh-NXt287r6bN6nszZ73iB8JtiFUAWkN1e23jCOJxCXfSm2j0hOkaH4_MCTAU-bqJzgQ17zQsw4m8BzGVcDkJMUsIkUZAT6rQUH0_2OaMNTE_6im-CigliqCsQZ_0tlhTJN2YnEoT2KAdyoji4D2Djnh0w_EYVDB1jg0-D7OTnryMFOajyV2Dj7usXdIr6MhaWoXr5XF2e-z4eIpgGDI_Dy4hoQieOGzSxc7li_KB_iSiyyesQ4xQObfx63zH52LksDErXK9PGV_8mIYade3jzisXiqmsN8ETqXH6Yhd4votzL9FycLYn1QRgzTvM7DxaJy0)
