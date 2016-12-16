@@ -10,7 +10,7 @@ module.exports = function(config) {
       'karma-riot'
     ],
     files: [
-      'node_modules/chai/chai',
+      'node_modules/chai/chai.js',
       'src/**/*.tag',
       'test/**/*.js'
     ],
