@@ -3,37 +3,37 @@
 ```plant
 @startuml
 class Todo {
-      - const String id
-        + String name
-          + String discription
-            + boolean checked
-              + check()
-                + uncheck()
+    - const String id
+    + String name
+    + String description
+    + boolean checked
+    + check()
+    + uncheck()
 }
 
 class TodoList {
-      - const String id
-        + Array<Todo> todos
-          + String title
-            + Todo create()
-              + Todo save(Todo todo)
-                + Todo getTodo(String id)
-                  + delete(String id, Array<String> ids)
+    - const String id
+    + Array<Todo> todos
+    + String title
+    + Todo create()
+    + Todo save(Todo todo)
+    + Todo getTodo(String id)
+    + delete(String id, Array<String> ids)
 }
 
 class TodoListFactory {
-      + new(String name)
+    + new(String name)
 }
 
 class TodoListRepository {
-      + save(TodoList)
-        + delete(String id, Array<String> ids)
+    + save(TodoList)
+    + delete(String id, Array<String> ids)
 }
 
 class TodoListService {
-      TodoList new(String name)
-        TodoList save(TodoList todoList)
-          boolean delete(String id, Array<String> ids) 
+    TodoList new(String name)
+    TodoList save(TodoList todoList)
+    boolean delete(String id, Array<String> ids)
 }
 
 TodoList o-- Todo
