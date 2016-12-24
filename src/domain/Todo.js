@@ -5,10 +5,10 @@ export default class Todo {
    constructor() {
        this._id = uuid();
        this._check = false;
-       this._name = "";
+       this._text = "";
    }
 
-   get id() {
+   getId() {
        return this._id;
    }
 
@@ -24,22 +24,11 @@ export default class Todo {
        this._check = false;
    }
 
-   get name() {
-       return this._name;
+   getText() {
+       return this._text;
    }
 
-   set name(name) {
-       this._name = name;
+   setText(text) {
+       this._text = text;
    }
 }
-// // Class syntax is a good test for the preprocessor because it is not supported
-// // by PhantomJS 1.9.
-// export default class Hello {
-//     constructor(name) {
-//         this.name = name;
-//     }
-//
-//     say() {
-//         return `Hello, ${this.name}!`;
-//     }
-// }

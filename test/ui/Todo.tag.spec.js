@@ -29,7 +29,7 @@ describe('TodoTag', function() {
     });
 
     it('todoObj.nameが"todo名前"の場合、todoのnameが"todo名前"', () => {
-        todo.name = 'todo名前';
+        todo.setText('todo名前');
         riot.mount('todo', {todoObj: todo})
         assert.equal(document.querySelector('todo > div').textContent, 'todo名前');
     });

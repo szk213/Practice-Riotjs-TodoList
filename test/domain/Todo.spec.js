@@ -1,10 +1,10 @@
 "use strict";
-import Todo from "../../src/domain/Todo.js"
+import Todo from "domain/Todo.js"
 
 describe("Todo", function () {
     it("Todo作成時_getId_Idが返る", () => {
       let todo = new Todo();
-      assert(todo.id);
+      assert(todo.getId());
     });
 
     it("Todo作成時_isChecked_falseが返る",  () => {
@@ -12,9 +12,9 @@ describe("Todo", function () {
         assert.equal(todo.isChecked(), false);
     });
 
-    it("Todo作成時_getName_空文字が返る", () => {
+    it("Todo作成時_getText_空文字が返る", () => {
         let todo = new Todo();
-        assert.equal(todo.name, "");
+        assert.equal(todo.getText(), "");
     });
 
     it("checkがfalseの場合_check_checkがtrueとなる", () => {
@@ -30,9 +30,9 @@ describe("Todo", function () {
         assert.equal(todo.isChecked(), false);
     });
 
-    it('setName("Todo名")_nameがTodo名となる', () => {
+    it('setText("Todo名")_textがTodo名となる', () => {
         let todo = new Todo();
-        todo.name ='Todo名';
-        assert.equal(todo.name, 'Todo名');
+        todo.setText('Todo名');
+        assert.equal(todo.getText(), 'Todo名');
     });
 });
