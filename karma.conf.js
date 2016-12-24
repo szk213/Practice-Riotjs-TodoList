@@ -4,14 +4,15 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['mocha','riot'],
     files: [
-      'node_modules/power-assert/build/power-assert.js',
-      'node_modules/sinon/pkg/sinon.js',
-      'src/**/*.tag',
-      'test/**/*.js'
+        'node_modules/babel-polyfill/dist/polyfill.js',
+        'node_modules/power-assert/build/power-assert.js',
+        'node_modules/sinon/pkg/sinon.js',
+        'src/**/*.tag',
+        'test/**/*.js'
     ],
     preprocessors: {
-      'src/**/*.js': ['webpack'],
-      'test/**/*.js': ['webpack'],
+      'src/**/*.js': ['webpack', 'sourcemap'],
+      'test/**/*.js': ['webpack', 'sourcemap'],
       '**/*.tag': ['riot']
     },
       webpack: {
@@ -27,6 +28,12 @@ module.exports = function(config) {
                           plugins: ['babel-plugin-espower']
                       }
                   }
+              ]
+          },
+          // 指定したパスを起点としたモジュールを読み込めるようにする
+          resolve: {
+              root: [
+                  `${__dirname}/src`,
               ]
           }
       },
