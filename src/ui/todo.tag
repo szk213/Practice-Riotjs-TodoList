@@ -1,6 +1,6 @@
 <todo>
     <input type="checkbox" checked={ todo.isChecked() }>
-    <div>{ todo.name }</div>
+    <div>{ todo.getText() }</div>
 
     <script>
     this.todo = opts.todoObj;
