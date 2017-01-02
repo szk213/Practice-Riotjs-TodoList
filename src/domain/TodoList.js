@@ -15,7 +15,7 @@ export default class TodoList {
         return this._name;
     }
 
-    [Symbol.iterator]() {
-        return this._todos.values()
+    getTodos() {
+        return this._todos;
     }
 }

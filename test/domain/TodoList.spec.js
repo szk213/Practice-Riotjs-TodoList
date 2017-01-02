@@ -18,9 +18,9 @@ describe('TodoList', () => {
             assert.equal(todoList.getName(), undefined);
         });
 
-        it('TodoList[Symbol.iterator]_iteratorを取得', () => {
+        it('getTodos()_todosArrayを取得', () => {
             let todoList = new TodoList();
-            assert(todoList[Symbol.iterator]);
+            assert(Array.isArray(todoList.getTodos()));
         });
     });
 });

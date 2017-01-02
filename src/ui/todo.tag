@@ -3,7 +3,7 @@
     <div>{ todo.getText() }</div>
 
     <script>
-    this.todo = opts.todoObj;
+    this.todo = opts.todo;
 
     </script>
 </todo>
